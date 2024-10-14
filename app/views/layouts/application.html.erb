@@ -1,26 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= content_for(:title) || "Depot" %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= yield :head %>
-
-    <link rel="manifest" href="/manifest.json">
-    <link rel="icon" href="/icon.png" type="image/png">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icon.png">
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
-
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
-    </main>
-  </body>
+<head>
+  <title>pragmatic bike store</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "inter-font", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
+<body>
+<header class="bg-green-700">
+  <%= image_tag 'logo.jpg', alt: 'The Pragmatic bike store', width: '124', height: '100' %>
+  <h1><%= @page_title %></h1>
+</header>
+<section class="flex">
+  <nav class="bg-green-900 p-6">
+    <ul class="text-gray-300 leading-8">
+      <li><a href="/">Home</a></li>
+      <li><a href="/question">Questions</a></li>
+      <li><a href="/news">News</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+  <main class="container mx-auto mt-4 px-5 flex">
+    <%= yield %>
+  </main>
+</section>
+<footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+  <div class="max-w-screen-xl mx-auto p-4 md:py-8">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+      <!-- Logo and Brand Section -->
+      <a href="https://flowbite.com/" class="flex items-center justify-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Misfit Technologies</span>
+      </a>
+      <!-- Navigation Links Aligned to Right Corner -->
+      <ul class="flex flex-row justify-end items-center text-sm font-medium text-gray-500 dark:text-gray-400 space-x-6 ml-auto">
+        <li>
+          <a href="#" class="hover:underline">About</a>
+        </li>
+        <li>
+          <a href="#" class="hover:underline">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="#" class="hover:underline">Licensing</a>
+        </li>
+        <li>
+          <a href="#" class="hover:underline">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Divider -->
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <!-- Copyright Notice -->
+    <span class="block text-sm text-gray-500 text-center sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Misfit technologies</a>. All Rights Reserved.</span>
+  </div>
+</footer>
+</body>
 </html>

@@ -1,10 +1,8 @@
 require "test_helper"
 
-class ProductTest < ActiveSupport::TestCase
+class StoreControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
     get store_index_url
     assert_response :success
   end
-
-
 end

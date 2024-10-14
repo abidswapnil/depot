@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05a1e96c-98d8-472c-8e19-85fec2046eb7" name="Changes" comment="" />
+    <list default="true" id="05a1e96c-98d8-472c-8e19-85fec2046eb7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/depot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/depot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/product.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/product.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/products/_product.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/products/_product.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/product_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/product_test.rb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +21,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../.rvm/gems/ruby-3.2.5/gems/actionview-7.2.1/lib/action_view/helpers/asset_tag_helper.rb" root0="SKIP_INSPECTION" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -40,10 +52,16 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/assets/images" />
+      <recent name="$PROJECT_DIR$/app/assets/images/Sliders" />
+    </key>
+  </component>
   <component name="RunManager" selected="Rails.depot">
     <configuration name="depot" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="depot" />
@@ -157,6 +175,20 @@
       <workItem from="1728131367823" duration="2147000" />
       <workItem from="1728172069425" duration="3325000" />
       <workItem from="1728186684230" duration="9714000" />
+      <workItem from="1728259171524" duration="7815000" />
+      <workItem from="1728274282191" duration="466000" />
+      <workItem from="1728274757558" duration="14411000" />
+      <workItem from="1728322785614" duration="393000" />
+      <workItem from="1728347321143" duration="6899000" />
+      <workItem from="1728360008072" duration="6010000" />
+      <workItem from="1728368206856" duration="706000" />
+      <workItem from="1728369339276" duration="13371000" />
+      <workItem from="1728403092136" duration="1543000" />
+      <workItem from="1728434050152" duration="1129000" />
+      <workItem from="1728440587755" duration="1221000" />
+      <workItem from="1728445390620" duration="9350000" />
+      <workItem from="1728878455323" duration="3743000" />
+      <workItem from="1728897522441" duration="2686000" />
     </task>
     <servers />
   </component>

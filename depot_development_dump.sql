@@ -155,6 +155,42 @@ CREATE TABLE public.schema_migrations (
 ALTER TABLE public.schema_migrations OWNER TO root;
 
 --
+-- Name: users; Type: TABLE; Schema: public; Owner: root
+--
+
+CREATE TABLE public.users (
+    id bigint NOT NULL,
+    name character varying,
+    password_digest character varying,
+    created_at timestamp(6) without time zone NOT NULL,
+    updated_at timestamp(6) without time zone NOT NULL
+);
+
+
+ALTER TABLE public.users OWNER TO root;
+
+--
+-- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: root
+--
+
+CREATE SEQUENCE public.users_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER SEQUENCE public.users_id_seq OWNER TO root;
+
+--
+-- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: root
+--
+
+ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
+
+
+--
 -- Name: carts id; Type: DEFAULT; Schema: public; Owner: root
 --
 
@@ -173,6 +209,13 @@ ALTER TABLE ONLY public.line_items ALTER COLUMN id SET DEFAULT nextval('public.l
 --
 
 ALTER TABLE ONLY public.products ALTER COLUMN id SET DEFAULT nextval('public.products_id_seq'::regclass);
+
+
+--
+-- Name: users id; Type: DEFAULT; Schema: public; Owner: root
+--
+
+ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_id_seq'::regclass);
 
 
 --
@@ -206,14 +249,10 @@ COPY public.line_items (id, product_id, cart_id, created_at, updated_at, quantit
 --
 
 COPY public.products (id, title, description, image_url, price, created_at, updated_at) FROM stdin;
-7	Royal enfield	Royal Enfield motorcycles are celebrated for their vintage styling, reminiscent of the golden age of motorcycling. The design philosophy emphasizes simplicity and elegance, with clean lines, exposed mechanical components, and minimalistic chrome accents. The hallmark of Royal Enfield’s design is its retro aesthetic, which harks back to an era when motorcycles were about the pure joy of riding, not just about speed and technology	enfield.jpg	10000.0	2024-10-08 02:25:54.24888	2024-10-08 02:25:54.24888
-8	Suzuki Gixxer	The Suzuki Gixxer is a popular motorcycle known for its sporty design and performance. Launched in 2014, it features a sleek, aggressive styling that appeals to young riders. The Gixxer is powered by a 155cc, single-cylinder, air-cooled engine, delivering impressive performance and fuel efficiency.	gixxer.jpg	3000.0	2024-10-08 08:53:00.291945	2024-10-08 08:53:00.291945
-9	Honda CBR150R	This is Honda CBR150R. This has 4-sroke 2 valve engine. Launched in 2024	hondacbr.jpg	30000.0	2024-10-08 11:37:49.040802	2024-10-08 11:37:49.040802
 10	BMW M 1000 RR	The BMW M 1000 RR is BMW's flagship superbike, designed for high performance both on the track and the road. It's the first M model in BMW Motorrad’s lineup, bringing motorsport DNA to two wheels. The bike is based on the S 1000 RR but with significant upgrades to maximize speed, handling, and aerodynamics.\n\nKey features include a 999cc, inline-4 engine producing 212 horsepower and 113 Nm of torque. This power, combined with a lightweight design (weighing around 192 kg), allows for incredible acceleration and a top speed of over 300 km/h. The M 1000 RR comes with carbon fiber winglets for enhanced stability at high speeds, and its chassis is designed for precision cornering and handling.	bmw.jpg	40000.0	2024-10-09 02:37:09.022606	2024-10-09 02:37:09.022606
-5	Honda CBR	The Honda CBR series has long been a staple in the world of sport bikes, and the Honda CBR in particular continues to be a highly regarded model for riders who crave a mix of performance, agility, and reliability. Developed by the Japanese manufacturer Honda, the CBR lineup is known for its sport-oriented design, advanced engineering, and competitive price point.	cbr.jpg	50000.0	2024-10-07 09:39:20.524392	2024-10-07 10:56:06.914658
-4	Dukati panigale v4	The Honda CBR series has long been a staple in the world of sport bikes, and the Honda CBR in particular continues to be a highly regarded model for riders who crave a mix of performance, agility, and reliability. Developed by the Japanese manufacturer Honda, the CBR lineup is known for its sport-oriented design, advanced engineering, and competitive price point.	dukati.png	250000.0	2024-10-06 10:05:53.531061	2024-10-07 10:56:20.585829
 1	Suzuki hayabusa	The Honda CBR series has long been a staple in the world of sport bikes, and the Honda CBR in particular continues to be a highly regarded model for riders who crave a mix of performance, agility, and reliability. Developed by the Japanese manufacturer Honda, the CBR lineup is known for its sport-oriented design, advanced engineering, and competitive price point.	hayabusa.jpg	1500000.0	2024-10-06 09:04:00.606567	2024-10-07 10:57:01.369243
 6	Ducati streetfighter v4	The Fighter V4 stands as a symbol of power, precision, and performance. Built with cutting-edge technology and aggressive styling, this beast is designed for riders who crave speed and control. With a roaring 998cc V4 engine, it delivers an unmatched 200+ horsepower, offering a thrilling ride every time you twist the throttle. The lightweight aluminum frame and aerodynamic bodywork ensure superior handling and stability, whether you're on the track or the street.\n\nEquipped with state-of-the-art electronics, including advanced traction control, customizable riding modes, and seamless quick-shift capabilities, the Fighter V4 keeps you in command in every situation. The premium suspension and braking systems offer razor-sharp responsiveness, making it perfect for both racing enthusiasts and daily riders.	fighter.jpg	30000.78678657863476	2024-10-08 02:22:37.340562	2024-10-14 09:59:59.009856
+8	Suzuki Gixxer	The Suzuki Gixxer is a popular motorcycle known for its sporty design and performance. Launched in 2014, it features a sleek, aggressive styling that appeals to young riders. The Gixxer is powered by a 155cc, single-cylinder, air-cooled engine, delivering impressive performance and fuel efficiency.	bmw.jpg	3000.0	2024-10-08 08:53:00.291945	2024-10-15 06:19:39.911143
 \.
 
 
@@ -226,6 +265,24 @@ COPY public.schema_migrations (version) FROM stdin;
 20241008113408
 20241009041651
 20241009061424
+20241015052136
+\.
+
+
+--
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: root
+--
+
+COPY public.users (id, name, password_digest, created_at, updated_at) FROM stdin;
+1	rahim	$2a$12$1YhMylhYky4FrY7FtWnaaeOpoI/K.7bfhPmXPd5c2TAYhT.K8RAQ2	2024-10-15 05:28:24.696619	2024-10-15 05:41:43.60258
+7	Arif	$2a$12$4FjaRxkWOpGYsitc6cre8uYTX9zTGXwJt2QGl67nGZ.dh/icm3ZlG	2024-10-15 05:58:18.39922	2024-10-15 05:58:55.327087
+4	Raihan	$2a$12$GPJ9BbRjCOZMgpvEgA3mSOj4wZTzEjkE/FB/p1ZCdd2LmVaZhBuxK	2024-10-15 05:39:13.947311	2024-10-15 05:59:26.960624
+8	wasim	$2a$12$MiW7DNZyulVkuVDL6dRhs.zFgDIWR6Ik/wIbv6kXJDoUaLWS9Gzna	2024-10-15 06:00:45.8939	2024-10-15 06:00:45.8939
+9	era	$2a$12$h5J76kg176cRf6.3M1.yluc7T.scIUpzTgKrhaEpxEBzdRYJNcHgK	2024-10-15 06:01:11.733957	2024-10-15 06:01:11.733957
+10	moshiur	$2a$12$enqY7J7a8nmS4l2q4oulHeOxgGyqkjhyNNBSPobUk7btyEm05HF92	2024-10-15 06:01:29.318931	2024-10-15 06:01:29.318931
+12	diba	$2a$12$CkXoyJZ4hPlUenw9zY6m7uUpyp8bE6pkqSNTrF3L3Cq8Rsgauf/3y	2024-10-15 08:38:58.419308	2024-10-15 08:38:58.419308
+14	rafi	$2a$12$FS5NznOZnBEm1bWWvDCR4uU20caj8j9oE3.Nk8223oudlcLUs9Vf6	2024-10-15 08:59:05.274311	2024-10-15 08:59:22.919518
+3	Hasibul	$2a$12$IPgGTAr8ZlFRA/ixoQerlu63BveVBCGwj6nLSWahDowpnQyhZ18A.	2024-10-15 05:38:52.777587	2024-10-15 09:17:32.604953
 \.
 
 
@@ -247,7 +304,14 @@ SELECT pg_catalog.setval('public.line_items_id_seq', 1, false);
 -- Name: products_id_seq; Type: SEQUENCE SET; Schema: public; Owner: root
 --
 
-SELECT pg_catalog.setval('public.products_id_seq', 10, true);
+SELECT pg_catalog.setval('public.products_id_seq', 12, true);
+
+
+--
+-- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: root
+--
+
+SELECT pg_catalog.setval('public.users_id_seq', 15, true);
 
 
 --
@@ -288,6 +352,14 @@ ALTER TABLE ONLY public.products
 
 ALTER TABLE ONLY public.schema_migrations
     ADD CONSTRAINT schema_migrations_pkey PRIMARY KEY (version);
+
+
+--
+-- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: root
+--
+
+ALTER TABLE ONLY public.users
+    ADD CONSTRAINT users_pkey PRIMARY KEY (id);
 
 
 --

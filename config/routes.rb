@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get "admin/index"
+  get "sessions/new"
+  get "sessions/create"
+  get "sessions/destroy"
+  resources :users
   resources :line_items
   resources :carts
   get "static_pages/question"

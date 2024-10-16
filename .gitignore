@@ -17,6 +17,9 @@
 !/log/.keep
 !/tmp/.keep
 
+.idea/dataSources.local.xml
+.idea/dataSources.xml
+
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
 !/tmp/pids/

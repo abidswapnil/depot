@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  get "admin/index"
-  get "sessions/new"
-  get "sessions/create"
-  get "sessions/destroy"
+  get "admin", to: "admin#index"
+  controller :sessions do
+    get "login" => :new
+    post "login" => :create
+    delete "logout" => :destroy
+  end
+
   resources :users
   resources :line_items
   resources :carts
@@ -10,7 +13,9 @@ Rails.application.routes.draw do
   get "static_pages/news"
   get "static_pages/contact"
   root "store#index", as: "store_index"
-  resources :products
+  resources :products do
+    get :who_bought, on: :member
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -22,9 +27,9 @@ Rails.application.routes.draw do
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
   # config/routes.rb
-  get 'question', to: 'static_pages#question'
-  get 'news', to: 'static_pages#news'
-  get 'contact', to: 'static_pages#contact'
+  get "question", to: "static_pages#question"
+  get "news", to: "static_pages#news"
+  get "contact", to: "static_pages#contact"
 
 
   # Defines the root path route ("/")

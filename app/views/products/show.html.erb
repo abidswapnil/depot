@@ -5,7 +5,7 @@
     <% end %>
 
     <div class="flex">
-      <img class="h-40 w-[50%] px-5" src="/assets/<%= @product.image_url %>" alt="image">
+      <img class="h-40 w-8 px-5" src="/assets/<%= @product.image_url %>" alt="image">
       <div class="">
         <div class="font-semibold pb-3"><%= @product.title %></div>
         <div class="pb-3 tex"><%= @product.description %></div>
@@ -17,9 +17,6 @@
     <%= link_to "Back to products", products_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <div class="inline-block ml-2">
       <%= button_to "Destroy this product", @product, method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
-    </div>
-    <div class="inline-block ml-2 px-2.5">
-      <%= button_to "Add to cart", @product, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
     </div>
   </div>
 </div>

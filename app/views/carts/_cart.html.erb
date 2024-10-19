@@ -1,5 +1,5 @@
-<div id="<%= dom_id cart %>">
-  <h2 class="font-bold text-lg mb-3">Your Pragmatic Cart</h2>
+<div id="<%= dom_id cart %>" class="py-3">
+  <h2 class="font-bold text-lg mb-3">Pragmatic Cart <%= cart.id %></h2>
   <ul class="list-none list-inside">
     <% cart.line_items.each do |item| %>
       <li><%= item.quantity %> &times; <%= item.product.title %></li>

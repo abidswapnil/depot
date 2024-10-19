@@ -38,16 +38,18 @@ inline-block" id="notice">
         <div class="text-left text-gray-500 pb-3">
           <%=sanitize(product.description.truncate(50)) %>
         </div>
-        <div class="w-[100%]] grid grid-cols-1 items-center justify-between">
-          <span class="text-1xl font-bold text-gray-800 dark:text-gray-600 pb-2"><%= number_to_currency(product.price, unit: "$ ", precision: 2) %></span>
-<!--          <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</a>-->
+        <div class="flex items-center justify-between">
+          <span class="text-1xl font-semibold text-gray-800"><%= number_to_currency(product.price, unit: "$ ", precision: 2) %></span>
           <%= button_to "Add to cart", line_items_path(product_id: product), class: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" %>
         </div>
       </div>
     </div>
-
-<% end %>
-
+  <% end %>
 </div>
 
+
+<!--<div class="flex items-center justify-between">-->
+<!--  <span class="text-3xl font-bold text-gray-900 dark:text-white">$599</span>-->
+<!--  <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</a>-->
+<!--</div>-->
 

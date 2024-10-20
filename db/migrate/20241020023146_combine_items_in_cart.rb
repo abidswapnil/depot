@@ -1,7 +1,7 @@
 class CombineItemsInCart < ActiveRecord::Migration[7.2]
   def up
     Cart.all.each do |cart|
-      sum = cart.line_items.group(:product_id).sum(:quantity)
+      sums = cart.line_items.group(:product_id).sum(:quantity)
 
       sums.each do |product_id, quantity|
         if quantity > 1

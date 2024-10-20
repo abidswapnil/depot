@@ -54,7 +54,7 @@ class ProductsController < ApplicationController
         format.html { redirect_to products_path, status: :see_other, notice: "Product was successfully destroyed." }
         format.json { head :no_content }
       else
-        format.html { redirect_to product_path, notice: "Product present in line items." }
+        format.html { redirect_to product_path, alert: "Product present in line items!" }
         format.json { head :no_content }
       end
     end
@@ -70,4 +70,5 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:title, :description, :image_url, :price)
     end
+
 end

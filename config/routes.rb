@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get "admin", to: "admin#index"
+  get "not_found", to: "application#not_found"
   controller :sessions do
     get "login" => :new
     post "login" => :create
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
   get "static_pages/question"
   get "static_pages/news"
   get "static_pages/contact"
+  get "static_pages/not_found"
   root "store#index", as: "store_index"
   resources :products do
     get :who_bought, on: :member

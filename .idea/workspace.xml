@@ -5,19 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05a1e96c-98d8-472c-8e19-85fec2046eb7" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
-      <change afterPath="$PROJECT_DIR$/app/views/shared/_not_found.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/static_pages/data_not_found.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/static_pages/page_not_found.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/carts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/carts_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/products_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/products_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/static_pages_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/static_pages_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/products/_product.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/products/_product.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/products/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/products/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/store/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/store/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/shared/_not_found.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/static_pages/not_found.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/static_pages/data_not_found.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20241009061424_add_quantity_to_line_items.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20241020023146_combine_items_in_cart.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20241020023146_combine_items_in_cart.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20241020044948_add_quantity_to_line_items.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,43 +72,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Rails.depot.executor": "Debug",
-    "RailsCreateViewFileDialog.DEFAULT_TEMPLATE": "ERB File",
-    "Ruby.cart.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Test::Unit/Shoulda/Minitest.StoreControllerTest.executor": "Run",
-    "Test::Unit/Shoulda/Minitest.UsersControllerTest.executor": "Run",
-    "Test::Unit/Shoulda/Minitest.test_should_create_cart.executor": "Run",
-    "Test::Unit/Shoulda/Minitest.test_should_create_user.executor": "Run",
-    "Test::Unit/Shoulda/Minitest.test_should_destroy_product.executor": "Run",
-    "Test::Unit/Shoulda/Minitest.test_should_destroy_user.executor": "Run",
-    "Test::Unit/Shoulda/Minitest.test_should_get_edit.executor": "Run",
-    "Test::Unit/Shoulda/Minitest.test_should_get_index (1).executor": "Run",
-    "Test::Unit/Shoulda/Minitest.test_should_get_index.executor": "Run",
-    "Test::Unit/Shoulda/Minitest.test_should_get_new.executor": "Run",
-    "Test::Unit/Shoulda/Minitest.test_should_not_destroy_product.executor": "Run",
-    "Test::Unit/Shoulda/Minitest.test_should_show_user.executor": "Run",
-    "Test::Unit/Shoulda/Minitest.test_should_update_user.executor": "Run",
-    "Test::Unit/Shoulda/Minitest.test_visiting_the_index.executor": "Run",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/abid/leetcode",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ruby.structure.view.model.defaults.configured": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Rails.depot.executor&quot;: &quot;Debug&quot;,
+    &quot;RailsCreateViewFileDialog.DEFAULT_TEMPLATE&quot;: &quot;ERB File&quot;,
+    &quot;Ruby.cart.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Test::Unit/Shoulda/Minitest.StoreControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Test::Unit/Shoulda/Minitest.UsersControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;Test::Unit/Shoulda/Minitest.test_should_create_cart.executor&quot;: &quot;Run&quot;,
+    &quot;Test::Unit/Shoulda/Minitest.test_should_create_user.executor&quot;: &quot;Run&quot;,
+    &quot;Test::Unit/Shoulda/Minitest.test_should_destroy_product.executor&quot;: &quot;Run&quot;,
+    &quot;Test::Unit/Shoulda/Minitest.test_should_destroy_user.executor&quot;: &quot;Run&quot;,
+    &quot;Test::Unit/Shoulda/Minitest.test_should_get_edit.executor&quot;: &quot;Run&quot;,
+    &quot;Test::Unit/Shoulda/Minitest.test_should_get_index (1).executor&quot;: &quot;Run&quot;,
+    &quot;Test::Unit/Shoulda/Minitest.test_should_get_index.executor&quot;: &quot;Run&quot;,
+    &quot;Test::Unit/Shoulda/Minitest.test_should_get_new.executor&quot;: &quot;Run&quot;,
+    &quot;Test::Unit/Shoulda/Minitest.test_should_not_destroy_product.executor&quot;: &quot;Run&quot;,
+    &quot;Test::Unit/Shoulda/Minitest.test_should_show_user.executor&quot;: &quot;Run&quot;,
+    &quot;Test::Unit/Shoulda/Minitest.test_should_update_user.executor&quot;: &quot;Run&quot;,
+    &quot;Test::Unit/Shoulda/Minitest.test_visiting_the_index.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/abid/leetcode&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/assets/images" />
@@ -415,6 +410,8 @@
       <workItem from="1729385008229" duration="642000" />
       <workItem from="1729385655583" duration="482000" />
       <workItem from="1729386731562" duration="4253000" />
+      <workItem from="1729435579300" duration="4462000" />
+      <workItem from="1729471594259" duration="1894000" />
     </task>
     <task id="LOCAL-00001" summary="7th commit">
       <option name="closed" value="true" />

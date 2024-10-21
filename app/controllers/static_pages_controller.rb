@@ -9,9 +9,7 @@ class StaticPagesController < ApplicationController
   def contact
   end
 
-  def not_found
+  def data_not_found
   end
 
-  def page_not_found
-  end
 end

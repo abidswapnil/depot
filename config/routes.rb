@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :orders
   get "admin", to: "admin#index"
   get "data_not_found", to: "application#data_not_found"
   get "page_not_found", to: "application#page_not_found"

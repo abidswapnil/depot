@@ -4,7 +4,7 @@ class CreateOrders < ActiveRecord::Migration[7.2]
       t.string :name
       t.text :address
       t.string :email
-      t.decimal :pay_type
+      t.integer :pay_type
       t.timestamps
     end
   end

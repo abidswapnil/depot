@@ -11,4 +11,8 @@ class ApplicationController < ActionController::Base
     redirect_to static_pages_page_not_found_path
   end
 
+  def current_user
+    @current_user = User.find(session[:user_id]) if session[:user_id]
+  end
+
 end

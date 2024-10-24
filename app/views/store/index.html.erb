@@ -1,14 +1,10 @@
-<div>
-  <% if notice.present? %>
-    <p class="py-2 px-5 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice">
-      <%= notice %>
-    </p>
-  <% end %>
-  <% if alert.present? %>
-     <p class="py-2 px-5 bg-red-50 mb-5 text-red-500 font-medium rounded-lg inline-block" id="alert">
-       <%= alert %>
-     </p>
-  <% end %>
+<div class="w-full">
+  <%= render 'notice' %>
+
+  <h1 class="font-semibold text-2xl mb-6 pb-5 border-b-2">
+    Your Pragmatic Catalog
+  </h1>
+
   <div class="grid grid-cols-5 gap-4">
     <% @products.each do |product| %>
       <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow  dark:bg-white-600 dark:border-gray-200 overflow-hidden">
@@ -40,7 +36,7 @@
             <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
           </div>
           <div class="text-left text-gray-500 pb-3">
-            <%=sanitize(product.description.truncate(50)) %>
+            <%=sanitize(product.description.truncate(30)) %>
           </div>
           <div class="items-center justify-between">
             <span class="text-1xl font-semibold text-gray-800"><%= number_to_currency(product.price, unit: "$ ", precision: 2) %></span>

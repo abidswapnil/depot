@@ -24,13 +24,18 @@ class OrdersController < ApplicationController
 
   # POST /orders or /orders.json
   def create
-    order_params[:pay_type] = order_params[:pay_type].to_i
     @order = Order.new(order_params)
+    @order.add_line_items_from_cart(@cart)
 
     respond_to do |format|
       if @order.save
-        format.html { redirect_to store_index_url, notice: "Order was successfully created." }
-        format.json { render :show, status: :created, location: @order }
+        Cart.destroy(session[:cart_id])
+        session[:cart_id] = nil
+        OrderMailer.with(order: @order).received.deliver_now
+        format.html { redirect_to store_index_url, notice:
+          "Thank you for your order." }
+        format.json { render :show, status: :created,
+                             location: @order }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @order.errors, status: :unprocessable_entity }

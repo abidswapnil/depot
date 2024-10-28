@@ -14,7 +14,7 @@
   <%= javascript_importmap_tags %>
 </head>
 <body>
-<header class="bg-green-700">
+<header class="bg-green-700 flex">
   <%= image_tag 'logo.jpg', alt: 'The Pragmatic bike store', width: '124', height: '100' %>
   <h1><%= @page_title %></h1>
 </header>
@@ -23,12 +23,22 @@
      <%= render partial: 'layouts/cart', locals: {cart: @cart } %>
     <ul class="text-gray-300 leading-8">
       <li><a href="/">Home</a></li>
-      <li><a href="/question">Questions</a></li>
-      <li><a href="/news">News</a></li>
-      <li><a href="/contact">Contact</a></li>
+      <% if session[:email] != 'admin@gmail.com' %>
+        <li><a href="/question">Questions</a></li>
+        <li><a href="/news">News</a></li>
+        <li><a href="/contact">Contact</a></li>
+      <% else %>
+        <li><a href="/users">Users</a></li>
+        <li><a href="/orders">Orders</a></li>
+        <li><a href="/products">Products</a></li>
+      <% end %>
+      <% if session[:email] %>
+        <li class="font-bold dark:text-gray-400" ><%= link_to 'Log out', logout_path, method: :delete %></li>
+      <% end %>
     </ul>
   </nav>
-  <main class="container mx-auto mt-4 px-5 flex">
+  <main class="container mx-auto mt-4 px-5">
+    <%= session.to_hash %>
     <%= yield %>
   </main>
 </section>

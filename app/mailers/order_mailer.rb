@@ -4,7 +4,7 @@ class OrderMailer < ApplicationMailer
   # with the following lookup:
   #
   #   en.order_mailer.received.subject
-  #
+
   def received
     @order = params[:order]
     mail to: @order.email, subject: "Pragmatic Store Order Confirmation"

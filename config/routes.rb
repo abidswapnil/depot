@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  resources :orders
-  get "admin", to: "admin#index"
+  get "sessions/create"
+  get "sessions/destroy"
+
   get "data_not_found", to: "application#data_not_found"
   get "page_not_found", to: "application#page_not_found"
+
+  get "admin" => "admin#index"
 
   controller :sessions do
     get "login" => :new
@@ -11,6 +14,7 @@ Rails.application.routes.draw do
   end
 
   resources :users
+  resources :orders
   resources :line_items
   resources :carts
   get "static_pages/question"
@@ -39,8 +43,7 @@ Rails.application.routes.draw do
   get "news", to: "static_pages#news"
   get "contact", to: "static_pages#contact"
 
-
-  match "*unmatched", to: "application#route_not_found", via: :all
+  # match "*unmatched", to: "application#route_not_found", via: :all
 
   # Defines the root path route ("/")
   # root "posts#index"

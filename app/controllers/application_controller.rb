@@ -1,7 +1,10 @@
 class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordNotFound, with: :data_not_found
   # Only allow modern browsers supporting webp images, web push, badges, import maps, CSS nesting, and CSS :has.
+  before_action :authorize
   allow_browser versions: :modern
+
+
 
   def data_not_found
     redirect_to static_pages_data_not_found_path
@@ -15,4 +18,10 @@ class ApplicationController < ActionController::Base
     @current_user = User.find(session[:user_id]) if session[:user_id]
   end
 
+  protected
+  def authorize
+    unless User.find_by(id: session[:user_id])
+      redirect_to login_url, notice: "Please log in"
+    end
+  end
 end

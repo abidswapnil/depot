@@ -1,15 +1,15 @@
 class SessionsController < ApplicationController
+  skip_before_action :authorize
   def new
   end
 
   def create
-    user = User.find_by(email: params[:email])
+    user = User.find_by(name: params[:name])
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
-      session[:email] = user.email
-      redirect_to store_index_url, notice: "Logged in!"
+      redirect_to admin_url
     else
-      redirect_to login_url, notice: "Invalid name/password combination!"
+      redirect_to login_url, alert: "Invalid user/password combination"
     end
   end
 

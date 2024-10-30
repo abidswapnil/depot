@@ -43,7 +43,7 @@ Rails.application.routes.draw do
   get "news", to: "static_pages#news"
   get "contact", to: "static_pages#contact"
 
-  # match "*unmatched", to: "application#route_not_found", via: :all
+  match "*unmatched", to: "application#route_not_found", via: :all
 
   # Defines the root path route ("/")
   # root "posts#index"

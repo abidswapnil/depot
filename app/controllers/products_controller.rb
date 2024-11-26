@@ -32,6 +32,9 @@ class ProductsController < ApplicationController
       end
     end
   end
+  def test
+    @product = Product.new(params[:product])
+  end
 
   # PATCH/PUT /products/1 or /products/1.json
   def update

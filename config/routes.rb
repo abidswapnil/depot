@@ -13,6 +13,13 @@ Rails.application.routes.draw do
     delete "logout" => :destroy
   end
 
+  scope "(:locale)" do
+    resources :orders
+    resources :line_items
+    resources :carts
+    # root 'store#index', as: 'store_index', via: :all
+  end
+
   resources :users
   resources :orders
   resources :line_items
@@ -42,6 +49,8 @@ Rails.application.routes.draw do
   get "question", to: "static_pages#question"
   get "news", to: "static_pages#news"
   get "contact", to: "static_pages#contact"
+
+  get "test", to: "products#test"
 
   match "*unmatched", to: "application#route_not_found", via: :all
 

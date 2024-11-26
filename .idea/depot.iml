@@ -56,8 +56,14 @@
     <orderEntry type="library" scope="PROVIDED" name="date (v3.3.4, RVM: ruby-3.2.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="debug (v1.9.2, RVM: ruby-3.2.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="drb (v2.2.1, RVM: ruby-3.2.5) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dry-core (v1.0.2, RVM: ruby-3.2.5) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dry-inflector (v1.1.0, RVM: ruby-3.2.5) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dry-logic (v1.5.0, RVM: ruby-3.2.5) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dry-types (v1.7.2, RVM: ruby-3.2.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.13.0, RVM: ruby-3.2.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v1.2.1, RVM: ruby-3.2.5) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="grape (v2.2.0, RVM: ruby-3.2.5) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="grape_on_rails_routes (v0.3.2, RVM: ruby-3.2.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v1.14.6, RVM: ruby-3.2.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="importmap-rails (v2.0.2, RVM: ruby-3.2.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="io-console (v0.7.2, RVM: ruby-3.2.5) [gem]" level="application" />
@@ -73,6 +79,8 @@
     <orderEntry type="library" scope="PROVIDED" name="mini_mime (v1.1.5, RVM: ruby-3.2.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest (v5.25.1, RVM: ruby-3.2.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="msgpack (v1.7.3, RVM: ruby-3.2.5) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mustermann (v3.0.3, RVM: ruby-3.2.5) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mustermann-grape (v1.1.0, RVM: ruby-3.2.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="net-imap (v0.4.16, RVM: ruby-3.2.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="net-pop (v0.1.2, RVM: ruby-3.2.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="net-protocol (v0.2.2, RVM: ruby-3.2.5) [gem]" level="application" />
@@ -107,6 +115,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rubocop-rails (v2.26.2, RVM: ruby-3.2.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubocop-rails-omakase (v1.0.0, RVM: ruby-3.2.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ruby-progressbar (v1.13.0, RVM: ruby-3.2.5) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ruby2_keywords (v0.0.5, RVM: ruby-3.2.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubyzip (v2.3.2, RVM: ruby-3.2.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="securerandom (v0.3.1, RVM: ruby-3.2.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v4.25.0, RVM: ruby-3.2.5) [gem]" level="application" />
